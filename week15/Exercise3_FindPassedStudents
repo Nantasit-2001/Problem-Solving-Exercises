@@ -1,0 +1,17 @@
+function getPassedStudents(students) {
+   const result=[];
+    for(let i =0 ; i<students.length;i++){
+    if(students[i].score>= 50){
+        result.push(students[i].name)
+    }
+   }
+   return (result)
+//  return students.filter((item)=>item.score>=50).map(item=>item.name)
+};
+
+let result1 = getPassedStudents([
+   { name: "A", score: 80 },
+   { name: "B", score: 45 },
+   { name: "C", score: 60 }
+]);
+console.log(result1); // ["A", "C"] 
